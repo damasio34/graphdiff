@@ -12,7 +12,7 @@ namespace Damasio34.GraphDiff
     /// </summary>
     public class GraphdiffAggregateUpdateStrategy : OnlyAggregateRootUpdateStrategy
     {
-        #region ' IAggregateUpdateStrategy '
+        #region [ IAggregateUpdateStrategy ]
 
         public override void AlterarAgregacao<TAggRoot>(IUnitOfWork unitOfWork, TAggRoot aggRoot, Expression<Func<IAggregateConfiguration<TAggRoot>, object>> aggregateConfiguration)
         {
@@ -33,7 +33,6 @@ namespace Damasio34.GraphDiff
             dbContext.UpdateGraph(aggRoot, configExp);
         }
 
-        #endregion
-        
+        #endregion        
     }
 }
